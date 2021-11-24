@@ -121,7 +121,7 @@ async function modifyWatch(watchID, updateKey, updateValue) {
         ExpressionAttributeValues: {
             ':value': updateValue
         },
-        ReturnValues: 'UPDATEED_NEW'
+        ReturnValues: 'UPDATED_NEW'
     }
     return await dynamodb.update(params).promise().then((response) => {
         const body = {

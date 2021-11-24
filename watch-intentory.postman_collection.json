@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "9b17d154-82e8-4f69-a35b-562ea121f3ef",
+		"name": "watch-intentory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test connection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://raorho27zf.execute-api.eu-north-1.amazonaws.com/prod/health",
+					"protocol": "https",
+					"host": [
+						"raorho27zf",
+						"execute-api",
+						"eu-north-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add watch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"watchID\": 1011,\n    \"name\": \"prod PETITE CORNWALL\",\n    \"color\": \"prod black\",\n    \"price\": 999,\n    \"inventory\": 450\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://raorho27zf.execute-api.eu-north-1.amazonaws.com/prod/watch",
+					"protocol": "https",
+					"host": [
+						"raorho27zf",
+						"execute-api",
+						"eu-north-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"watch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all watchs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://raorho27zf.execute-api.eu-north-1.amazonaws.com/prod/watchs",
+					"protocol": "https",
+					"host": [
+						"raorho27zf",
+						"execute-api",
+						"eu-north-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"watchs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a watch record",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"watchID\": 1009\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://raorho27zf.execute-api.eu-north-1.amazonaws.com/prod/watch",
+					"protocol": "https",
+					"host": [
+						"raorho27zf",
+						"execute-api",
+						"eu-north-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"watch"
+					],
+					"query": [
+						{
+							"key": "watchID",
+							"value": "2222",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get a watch by watchID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://raorho27zf.execute-api.eu-north-1.amazonaws.com/prod/watch?watchID=1002",
+					"protocol": "https",
+					"host": [
+						"raorho27zf",
+						"execute-api",
+						"eu-north-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"watch"
+					],
+					"query": [
+						{
+							"key": "watchID",
+							"value": "1002"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update details of a watch",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"watchID\": 1002,\n    \"updateKey\": \"inventory\",\n    \"updateValue\": 200\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://raorho27zf.execute-api.eu-north-1.amazonaws.com/prod/watch",
+					"protocol": "https",
+					"host": [
+						"raorho27zf",
+						"execute-api",
+						"eu-north-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"watch"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

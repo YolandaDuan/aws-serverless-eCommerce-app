@@ -2,6 +2,7 @@
 
 ## Tech stack
 - Node.js
+    - Express
 - AWS
     - Lamda
         - Function: watch-inventory
@@ -14,7 +15,11 @@
         - Role: newInventory-role, associated with two policies
             - AmazonDynamoDBFullAccess
             - CloudWatchLogsFullAccess
-    - CloudWatch  
+    - CloudWatch 
+    - CodePipeline
+    - CodeDeploy
+    - EC2
+
 - Postman, https://documenter.getpostman.com/view/17317918/UVJZoduC
 
 

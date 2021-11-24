@@ -1,0 +1,7 @@
+{
+    "name": "aws-serverless-ecommerce-app",
+    "version": "0.0.1",
+    "dependencies": {
+        "express": "4.17.1"
+    }
+}
